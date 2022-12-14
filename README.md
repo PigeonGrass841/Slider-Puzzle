@@ -12,17 +12,29 @@ The list below includes the essential elements of the page.
     ● There should be a board with 16 spaces and 15 numbered tiles. You may use any style or colors you like. You may use a table.
 # Functionality
 The page opens with the puzzle in its solved state.
+
 The user will have to shuffle it manually.
+
 Note that a puzzle like this cannot be randomly shuffled.
+
 If the pieces are simply taken off the board and replaced, they may be done so in a way that makes it impossible to solve the puzzle.
+
 The user clicks on one of the numbers adjacent to the empty tile and that number moves to the empty space, leaving its original space vacant.
+
 Clicking on tiles that are not adjacent to the empty space will have no effect.
+
 After the user is finished shuffling, they should click the start button. The number of moves will be set to 0.
+
 At that point, the program will start counting moves.
+
 Every time the user clicks and successfully moves a number into a blank spot, the number of moves will increase.
+
 When the user clicks reset, the page will stop counting moves.
+
 Remember that the number of moves does not reset to 0 until the start button is clicked.
+
 Update the display accordingly.
+
 The game should tell the user when (s)he wins.
 # Enhancements
     ● Create a shuffling function which will only be available when the puzzle is completely solved. It will shuffle the board by making 1000 random moves.
