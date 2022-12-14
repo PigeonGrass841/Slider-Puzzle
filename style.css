@@ -1,0 +1,13 @@
+table {
+    width: 100%;
+    border: thick solid brown;
+}
+
+th {
+    width: 20%;
+    border: 10px double goldenrod;
+    background-color: moccasin;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: brown;
+}
