@@ -3,6 +3,7 @@
 Write a simple slider game where the user puts numbers in order by moving “tiles” around.
 # Display
 The list below includes the essential elements of the page.
+
     ● The page should be dressed up using CSS.
     ● Instructions.
     ● A start button.
