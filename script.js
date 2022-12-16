@@ -19,6 +19,10 @@ function initialize() {
     space15 = 15;
     space16 = null;
 
+    selected = false;
+    from = null;
+    to = null;
+
     display("tile1", space1);
     display("tile2", space2);
     display("tile3", space3);
@@ -43,4 +47,19 @@ function initialize() {
 function display(id, number) {
     var placeholder = document.getElementById(id);
     placeholder.innerHTML = number;
+}
+
+function select(id) {
+    if (from) {
+        from = null;
+        selected = false;
+    }
+    else {
+        from = document.getElementById(id);
+        selected = true;
+    }
+}
+
+function swap(from, to) {
+    
 }
