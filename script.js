@@ -1,52 +1,38 @@
 function initialize() {
-    display("tile1", 1);
-    display("tile2", 2);
-    display("tile3", 3);
-    display("tile4", 4);
+    tile1 = document.getElementById("cell1");
+    tile2 = document.getElementById("cell2");
+    tile3 = document.getElementById("cell3");
+    tile4 = document.getElementById("cell4");
+
+    tile5 = document.getElementById("cell5");
+    tile6 = document.getElementById("cell6");
+    tile7 = document.getElementById("cell7");
+    tile8 = document.getElementById("cell8");
+
+    tile9 = document.getElementById("cell9");
+    tile10 = document.getElementById("cell10");
+    tile11 = document.getElementById("cell11");
+    tile12 = document.getElementById("cell12");
+
+    tile13 = document.getElementById("cell13");
+    tile14 = document.getElementById("cell14");
+    tile15 = document.getElementById("cell15");
+    tile16 = document.getElementById("cell16");
     
-    display("tile5", 5);
-    display("tile6", 6);
-    display("tile7", 7);
-    display("tile8", 8);
+    cellArray = [tile1, tile2, tile3, tile4, tile5, tile6, tile7, tile8, tile9, tile10, tile11, tile12, tile13, tile14, tile15, tile16];
+    console.log(cellArray);
+    set = false;
 
-    display("tile9", 9);
-    display("tile10", 10);
-    display("tile11", 11);
-    display("tile12", 12);
+    for (var i = 0; i < cellArray.length; i++) {
+        cellArray[i].cellPos = i + 1;
+        cellArray[i].display = i + 1;
 
-    display("tile13", 13);
-    display("tile14", 14);
-    display("tile15", 15);
-    display("tile16", null);
-
-    set = null;
-}
-
-function display(id, number) {
-    var placeholder = document.getElementById(id);
-    placeholder.innerHTML = number;
-}
-
-function swap(fromTile, toTile) {
-    var tempTile = document.getElementById(fromTile).innerHTML;
-    document.getElementById(fromTile).innerHTML = document.getElementById(toTile).innerHTML;
-    document.getElementById(toTile).innerHTML = tempTile;
-}
-
-function select(setTile) {
-    console.log(setTile);
-    var tile = document.getElementById(setTile).innerHTML;
-
-    if (set) {
-        if (set != tile) {
-            swap (set, tile);
-            set = null;
-        }
-        else {
-            set = null;
-        }
-    }
-    else {
-        set = tile;
+        console.log(cellArray[i].display);
     }
 }
+
+function select(setCell) {
+    
+}
+
+//https://github.com/Neill10/SliderPuzzle
