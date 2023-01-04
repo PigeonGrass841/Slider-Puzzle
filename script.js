@@ -1,47 +1,25 @@
 function initialize() {
-    space1 = 1;
-    space2 = 2;
-    space3 = 3;
-    space4 = 4;
-
-    space5 = 5;
-    space6 = 6;
-    space7 = 7;
-    space8 = 8;
-
-    space9 = 9;
-    space10 = 10;
-    space11 = 11;
-    space12 = 12
-
-    space13 = 13;
-    space14 = 14;
-    space15 = 15;
-    space16 = null;
-
-    selected = false;
-    from = null;
-    to = null;
-
-    display("tile1", space1);
-    display("tile2", space2);
-    display("tile3", space3);
-    display("tile4", space4);
+    display("tile1", 1);
+    display("tile2", 2);
+    display("tile3", 3);
+    display("tile4", 4);
     
-    display("tile5", space5);
-    display("tile6", space6);
-    display("tile7", space7);
-    display("tile8", space8);
+    display("tile5", 5);
+    display("tile6", 6);
+    display("tile7", 7);
+    display("tile8", 8);
 
-    display("tile9", space9);
-    display("tile10", space10);
-    display("tile11", space11);
-    display("tile12", space12);
+    display("tile9", 9);
+    display("tile10", 10);
+    display("tile11", 11);
+    display("tile12", 12);
 
-    display("tile13", space13);
-    display("tile14", space14);
-    display("tile15", space15);
+    display("tile13", 13);
+    display("tile14", 14);
+    display("tile15", 15);
     display("tile16", null);
+
+    set = null;
 }
 
 function display(id, number) {
@@ -49,17 +27,26 @@ function display(id, number) {
     placeholder.innerHTML = number;
 }
 
-function select(id) {
-    if (from) {
-        from = null;
-        selected = false;
-    }
-    else {
-        from = document.getElementById(id);
-        selected = true;
-    }
+function swap(fromTile, toTile) {
+    var tempTile = document.getElementById(fromTile).innerHTML;
+    document.getElementById(fromTile).innerHTML = document.getElementById(toTile).innerHTML;
+    document.getElementById(toTile).innerHTML = tempTile;
 }
 
-function swap(from, to) {
-    
+function select(setTile) {
+    console.log(setTile);
+    var tile = document.getElementById(setTile).innerHTML;
+
+    if (set) {
+        if (set != tile) {
+            swap (set, tile);
+            set = null;
+        }
+        else {
+            set = null;
+        }
+    }
+    else {
+        set = tile;
+    }
 }

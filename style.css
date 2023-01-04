@@ -3,11 +3,14 @@ table {
     border: thick solid brown;
 }
 
-th {
+td {
+    display: table-cell;
     width: 20%;
     border: 10px double goldenrod;
     background-color: moccasin;
+    text-align: center;
     font-size: 50px;
+    font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     color: brown;
 }

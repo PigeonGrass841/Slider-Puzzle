@@ -6,34 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider Puzzle</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body onload="initialize();">
-    <table>
-        <tr>
-            <th id="tile1" onclick="select("tile1");"></th>
-            <th id="tile2" onclick="select();"></th>
-            <th id="tile3" onclick="select();"></th>
-            <th id="tile4" onclick="select();"></th>
-        </tr>
-        <tr>
-            <th id="tile5"></th>
-            <th id="tile6"></th>
-            <th id="tile7"></th>
-            <th id="tile8"></th>
-        </tr>
-        <tr>
-            <th id="tile9"></th>
-            <th id="tile10"></th>
-            <th id="tile11"></th>
-            <th id="tile12"></th>
-        </tr>
-        <tr>
-            <th id="tile13"></th>
-            <th id="tile14"></th>
-            <th id="tile15"></th>
-            <th id="tile16"></th>
-        </tr>
-    </table>
+    <div>
+        <table>
+            <tr>
+                <td id="tile1" onclick="select(tile1);"></td>
+                <td id="tile2" onclick="select(tile2);"></td>
+                <td id="tile3" onclick="select(tile3);"></td>
+                <td id="tile4" onclick="select(tile4);"></td>
+            </tr>
+            <tr>
+                <td id="tile5" onclick="select(tile5);"></td>
+                <td id="tile6" onclick="select(tile6);"></td>
+                <td id="tile7" onclick="select(tile7);"></td>
+                <td id="tile8" onclick="select(tile8);"></td>
+            </tr>
+            <tr>
+                <td id="tile9" onclick="select(tile9);"></td>
+                <td id="tile10" onclick="select(tile10);"></td>
+                <td id="tile11" onclick="select(tile11);"></td>
+                <td id="tile12" onclick="select(tile12);"></td>
+            </tr>
+            <tr>
+                <td id="tile13" onclick="select(tile13);"></td>
+                <td id="tile14" onclick="select(tile14);"></td>
+                <td id="tile15" onclick="select(tile15);"></td>
+                <td id="tile16" onclick="select(tile16);"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
