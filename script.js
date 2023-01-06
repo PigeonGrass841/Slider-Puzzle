@@ -32,7 +32,6 @@ function initialize() {
     for (var i = 0; i < cellArray.length; i++) {
         cellArray[i].cellPos = i + 1;
         cellArray[i].display = i + 1;
-
         console.log(cellArray[i].display);
     }
 }
@@ -50,7 +49,7 @@ function select(cell) {
                 }
                 numMoves++;
                 movesDisplay.innerHTML = numMoves;
-                window();
+                win();
             }
             else {
                 console.log("Invalid");
@@ -118,6 +117,30 @@ function slide(from, to){
     from.innerHTML = from.display;
 }
 
+function shuffleCells() {
+    numMoves = 0;
+    movesDisplay.innerHTML = numMoves;
+    for (var i = 0; i < 100; i++) {
+        console.log("I: " + i);
+        for (tempCell of cellArray) {
+            if (tempCell.display == 16) {
+                emptyCell = tempCell;
+            }
+        }
+        validMovesArray = checkValid(emptyCell);
+        var random = Math.floor(Math.random() * validMovesArray.length);
+
+        slide(emptyCell, cellArray[validMovesArray[random] - 1]);
+
+        if (emptyCell.display == 16) {
+            emptyCell.innerHTML = "";
+        }
+        else {
+            cellArray[validMovesArray[random] - 1].innerHTML = "";
+        }
+    }
+}
+
 function win(){
     var win = true;
     for(var i = 0; i < cellArray.length;i++){
@@ -130,5 +153,3 @@ function win(){
         winDisplay.innerHTML = "You completed the slide puzzle!";
     }
 }
-
-//https://github.com/Neill10/SliderPuzzle

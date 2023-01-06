@@ -5,49 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slider Puzzle</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body onload="initialize();">
-    <!--Instructions.
-● A start button.
-● A reset button.
-● An output area that shows the number of moves-->
+    <h1>Slider Puzzle</h1>
     <div id="rules">
-
+        Slider Puzzle Game rules
+            <br>* Restore tiles to their original position to complete the slider puzzle.
+            <br>* Select the blank tile and click an adjacent tile to swap them.
+            <br>* You can choose to shuffle the board manually or click the shuffle button below.
+            <br>* We keep track of the number of moves.
     </div>
     <div id="counter"> Number of Moves:
         <span id="movesDisplay">0</span>
     </div>
-    <button id="shuffle" onclick="shuffle();">Shuffle</button>
+    <button id="shuffle" onclick="shuffleCells();">Shuffle</button>
     <div id = "winDisplay"></div>
     <div>
         <table>
             <tr>
-                <td id="cell1" onclick="select(tile1);"></td>
-                <td id="cell2" onclick="select(tile2);"></td>
-                <td id="cell3" onclick="select(tile3);"></td>
-                <td id="cell4" onclick="select(tile4);"></td>
+                <td id="cell1" onclick="select(tile1);">1</td>
+                <td id="cell2" onclick="select(tile2);">2</td>
+                <td id="cell3" onclick="select(tile3);">3</td>
+                <td id="cell4" onclick="select(tile4);">4</td>
             </tr>
             <tr>
-                <td id="cell5" onclick="select(tile5);"></td>
-                <td id="cell6" onclick="select(tile6);"></td>
-                <td id="cell7" onclick="select(tile7);"></td>
-                <td id="cell8" onclick="select(tile8);"></td>
+                <td id="cell5" onclick="select(tile5);">5</td>
+                <td id="cell6" onclick="select(tile6);">6</td>
+                <td id="cell7" onclick="select(tile7);">7</td>
+                <td id="cell8" onclick="select(tile8);">8</td>
             </tr>
             <tr>
-                <td id="cell9" onclick="select(tile9);"></td>
-                <td id="cell10" onclick="select(tile10);"></td>
-                <td id="cell11" onclick="select(tile11);"></td>
-                <td id="cell12" onclick="select(tile12);"></td>
+                <td id="cell9" onclick="select(tile9);">9</td>
+                <td id="cell10" onclick="select(tile10);">10</td>
+                <td id="cell11" onclick="select(tile11);">11</td>
+                <td id="cell12" onclick="select(tile12);">12</td>
             </tr>
             <tr>
-                <td id="cell13" onclick="select(tile13);"></td>
-                <td id="cell14" onclick="select(tile14);"></td>
-                <td id="cell15" onclick="select(tile15);"></td>
+                <td id="cell13" onclick="select(tile13);">13</td>
+                <td id="cell14" onclick="select(tile14);">14</td>
+                <td id="cell15" onclick="select(tile15);">15</td>
                 <td id="cell16" onclick="select(tile16);"></td>
             </tr>
         </table>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
