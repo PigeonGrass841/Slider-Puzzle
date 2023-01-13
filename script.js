@@ -120,7 +120,7 @@ function slide(from, to){
 function shuffleCells() {
     numMoves = 0;
     movesDisplay.innerHTML = numMoves;
-    for (var i = 0; i < 100; i++) {
+    for (var i = 0; i < 1000; i++) {
         console.log("I: " + i);
         for (tempCell of cellArray) {
             if (tempCell.display == 16) {
